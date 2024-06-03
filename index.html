@@ -50,6 +50,21 @@
             text-align: center;
             width: 100%;
         }
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
     </style>
 </head>
 <body>
@@ -83,16 +98,67 @@
         </section>
         <section>
             <h2>Implementation Details</h2>
+            <h3>Project Flowchart</h3>
             <div class="diagram-container", style="text-align: center;">
                 <img src="diagram.png">
             </div>
         </section>
-    
+        
+        <h2>Comparison With the State-Of-The-Art</h2>
+
+        <table>
+        <tr>
+            <th>Model</th>
+            <th>Accuracy</th>
+            <th>F1-score
+            </th>
+        </tr>
+        <tr>
+            <td>k-Nearest Neighbors</td>
+            <td>98.42%</td>
+            <td>97.72%</td>
+        </tr>
+        <tr>
+            <td>Naïve Bayes</td>
+            <td>91.38%</td>
+            <td>91.88%</td>
+        </tr>
+        <tr>
+            <td>Logistic Regression</td>
+            <td>95.74%</td>
+            <td>95.57%</td>
+        </tr>
+        <tr>
+            <td>Support Vector Machine</td>
+            <td>98.68%</td>
+            <td>98.38%</td>
+        </tr>
+        <tr>
+            <td>Random Forest</td>
+            <td>97.71%</td>
+            <td>97.59%</td>
+        </tr>
+        <tr>
+            <td>CNN (batch size 64)</td>
+            <td>max: 99.00% avg: 98.38%</td>
+            <td>max: 89.85% avg: 71.48%</td>
+        </tr>
+        <tr>
+            <td>CNN (batch size 32)</td>
+            <td>max: 99.06% avg: 98.70%</td>
+            <td>max: 94.70% avg: 81.90%</td>
+        </tr>
+        </table>
+
+</body>
 
         <section>
             <h2>Project Source Code</h2>
             <a href="path-to-your-source-code.zip" download>Download Source Code</a>
         </section>
+
+
+        
     </main>
     <footer>
         <p>&copy; Phishing Detection Project</p>
